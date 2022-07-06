@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Adoção</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <style>
+        body{
+            background-image: url(https://img.freepik.com/free-vector/animal-background-vector-with-cute-pets-illustration_53876-127698.jpg?w=2000);
+            background-size: cover;
+            background-position: 0% 30%;
+        }
+
+        .container{
+            border-radius: 30px;
+            background-color: rgba(255, 255, 255, 0.764);
+        }
+
+        span{
+            color: rgb(194, 7, 7);
+        }
+
+        .form-control, .form-select{
+            border: none;
+            border-bottom: 1px solid rgb(0, 81, 255);
+            background-color: rgba(226, 226, 255, 0.626);
+        }
+
+        .simnao{
+            display: flex;
+            justify-content: space-around;
+            width: 55%;
+            margin-top: 2%;
+        }
+
+        .masfem{
+            display: flex;
+            justify-content: space-around;
+            width: 85%;
+            margin-top: 2%;
+        }
+
+        .estadocivil, .racas{
+            margin-top: -2%;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 class="mb-5 text-center mt-3">Formulário de Adoção Responsável - Brasília/DF</h1>
+    <div class="container mt-3">
+        <form class="row g-3">
+            <div class="col-12">
+                <label for="nome" class="fw-bold">Nome Completo do Adotante<span>*</span></label>
+                <input type="text" class="form-control" name="nome" id="nome" required placeholder="Fulano de Tal Catarósvias">
+            </div>
+
+            
+            <div class="col-md-2">
+                <label for="data" class="fw-bold">Data de Nascimento<span>*</span></label>
+                <input type="date" class="form-control" name="data" id="data" required>
+            </div>
+
+            <div class="col-md-3">
+                <label for="sexo" class="fw-bold">Sexo<span>*</span></label>
+                <div class="masfem">
+                    <div>
+                        <label for="masc">Masculino</label>
+                        <input type="radio" class="form-check-input" name="sexo" id="masc" required>
+                    </div>
+                    <div>
+                        <label for="fem">Feminino</label>
+                        <input type="radio" class="form-check-input" name="sexo" id="fem" required>
+                    </div>
+                </div>
+                      
+            </div>
+
+            <div class="col-md-4">
+                <label for="inputStatus" class="form-label fw-bold">Estado Civil</label>
+                <select id="inputStatus" class="form-select estadocivil">
+                  <option selected>Escolha...</option>
+                  <option value="">Solteiro (a)</option>
+                  <option value="">Casado (a)</option>
+                  <option value="">Desesperado (a)</option>
+                  <option value="">Desesperançoso (a)</option>
+                </select>
+            </div> 
+
+            <div class="col-md-3">
+                <label for="tutor" class="fw-bold">Você será o tutor legal do animal?<span>*</span></label>
+                <div class="simnao">
+                    <div>
+                        <label for="sim">Sim</label>
+                        <input type="radio" class="form-check-input" name="tutor" id="sim" required>
+                    </div>
+                    <div>
+                        <label for="nao">Não</label>
+                        <input type="radio" class="form-check-input" name="tutor" id="nao" required>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="col-md-6">
+                <label for="endereco" class="fw-bold">Endereço<span>*</span></label>
+                <input type="text" class="form-control" name="endereco" id="endereco" required placeholder="Quadra Tal Rua X">
+            </div>
+
+            <div class="col-md-2">
+                <label for="num" class="fw-bold">Número<span>*</span></label>
+                <input type="text" class="form-control" name="num" id="num" required placeholder="Nº X">
+            </div>
+
+            <div class="col-md-4">
+                <label for="inputResidencia" class="fw-bold">Tipo de Residência<span>*</span></label>
+                <select id="inputResidencia" class="form-select" required>
+                    <option selected>Escolha...</option>
+                    <option value="">Casa Residencial</option> 
+                    <option value="">Apartamento</option> 
+                    <option value="">Chácara</option> 
+                    <option value="">Fazenda</option> 
+                    <option value="">Rancho</option> 
+                    <option value="">Sítio</option> 
+                    <option value="">Outro</option> 
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label for="email" class="fw-bold">Email<span>*</span></label>
+                <input type="email" class="form-control" name="email" id="email" required placeholder="exemplo@gmail.com">
+            </div>
+
+            <div class="col-md-3">
+                <label for="tel1" class="fw-bold">Telefone 1<span>*</span></label>
+                <input type="number" class="form-control" name="tel1" id="tel1" required placeholder="(61) 9xxxx-xxxx">
+            </div>
+
+            <div class="col-md-3">
+                <label for="tel2" class="fw-bold">Telefone 2</label>
+                <input type="number" class="form-control" name="tel2" id="tel2" placeholder="(61) 9xxxx-xxxx">
+            </div>
+
+
+
+            <div class="col-md-4">
+                <label for="inputRaca" class="form-label fw-bold">Raça<span>*</span></label>
+                <select id="inputRaca" class="form-select racas" required>
+                  <option selected>Escolha...</option>
+                  <option value="">Akita</option>
+                  <option value="">Basset hound</option>
+                  <option value="">Beagle</option>
+                  <option value="">Bichon frisé</option>
+                  <option value="">Boiadeiro australiano</option>
+                  <option value="">Border collie</option>
+                  <option value="">Boston terrier</option>
+                  <option value="">Boxer</option>
+                  <option value="">Buldogue francês</option>
+                  <option value="">Buldogue inglês</option>
+                  <option value="">Bull terrier</option>
+                  <option value="">Cane corso</option>
+                  <option value="">Cavalier king charles spaniel</option>
+                  <option value="">Chihuahua</option>
+                  <option value="">Chow chow</option>
+                  <option value="">Cocker spaniel inglês</option>
+                  <option value="">Dachshund</option>
+                  <option value="">Dálmata</option>
+                  <option value="">Doberman</option>
+                  <option value="">Dogo argentino</option>
+                  <option value="">Dogue alemão</option>
+                  <option value="">Fila brasileiro</option>
+                  <option value="">Golden retriever</option>
+                  <option value="">Husky siberiano</option>
+                  <option value="">Jack russell terrier</option>
+                  <option value="">Labrador retriever</option>
+                  <option value="">Lhasa apso</option>
+                  <option value="">Lulu da pomerânia</option>
+                  <option value="">Maltês</option>
+                  <option value="">Mastiff inglês</option>
+                  <option value="">Mastim tibetano</option>
+                  <option value="">Pastor alemão</option>
+                  <option value="">Pastor australiano</option>
+                  <option value="">Pastor de Shetland</option>
+                  <option value="">Pequinês</option>
+                  <option value="">Pinscher</option>
+                  <option value="">Pit bull</option>
+                  <option value="">Poodle</option>
+                  <option value="">Pug</option>
+                  <option value="">Rottweiler</option>
+                  <option value="">Schnauzer</option>
+                  <option value="">Shar-pei</option>
+                  <option value="">Shiba</option>
+                  <option value="">Shih tzu</option>
+                  <option value="">Staffordshire bull terrier</option>
+                  <option value="">Vira Lata</option>
+                  <option value="">Weimaraner</option>
+                  <option value="">Yorkshire</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label for="nomePet" class="fw-bold">Nome do Pet<span>*</span></label>
+                <input type="text" class="form-control" name="nomePet" id="nomePet" required placeholder="Coloque o nome desejado">
+            </div>
+
+            <div class="col-md-4">
+                <label for="motivo" class="fw-bold">Motivo da Adoção<span>*</span></label>
+                <select id="motivo" class="form-select" required>
+                    <option selected>Escolha...</option>
+                    <option value="">Solidão</option>
+                    <option value="">Companhia</option>
+                    <option value="">Coleção</option>
+                    <option value="">Divida de Jogo</option>
+                </select>
+              </div>
+
+              <div class="col-12 mt-5 text-center mb-3">
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+              </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
